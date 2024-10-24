@@ -6,7 +6,7 @@ const Add = () => {
     const [address, setAddress] = useState('');
     const [position, setPosition] = useState('');
     const [salary, setSalary] = useState('');
-    const [experience, setExperience] = useState(''); // Fixed spelling
+    const [experiance, setExperiance] = useState(''); // Fixed spelling
 
     const [message, setMessage] = useState(''); // For feedback
 
@@ -17,7 +17,7 @@ const Add = () => {
             address,
             position,
             salary,
-            experience // Use consistent variable name
+            experiance // Use consistent variable name
         })
         .then(response => {
             console.log(response.data);
@@ -27,7 +27,7 @@ const Add = () => {
             setAddress('');
             setPosition('');
             setSalary('');
-            setExperience(''); // Clear experience field
+            setExperiance(''); // Clear experience field
         })
         .catch(error => {
             console.error(error);
@@ -79,11 +79,11 @@ const Add = () => {
                     />
                 </div>
                 <div className='mt-2'>
-                    <label className='text-dark'>Experince (in years)</label>
+                    <label className='text-dark'>Experiance (in years)</label>
                     <input
                         className='form-control'
                         type="number"
-                        value={experience}
+                        value={experiance}
                         onChange={(e) => setExperiance(e.target.value)}
                         required // Added required attribute
                     />
