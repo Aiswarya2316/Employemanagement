@@ -37,7 +37,7 @@ const Display = () => {
     return (
         <div className='container mt-3'>
             <h2>Task List</h2>
-            <table className='table table-border table-hover'>
+            <table className='table table-primary table-border table-hover'>
                 <thead>
                     <tr>
                         <th>Emp ID</th>
@@ -64,7 +64,7 @@ const Display = () => {
                             <td>{task.phone}</td>
                             <td>
                                 <button className='btn btn-warning px-3' onClick={() => editTask(task)}>Edit</button>
-                                <button className='btn btn-danger' onClick={() => deleteTask(task)}>Delete</button>
+                                <button className='btn btn-info' onClick={() => deleteTask(task)}>Delete</button>
                             </td>
                         </tr>
                     ))}
@@ -82,6 +82,8 @@ const Display = () => {
 
 const EditTaskForm = ({ currentTask, updateTask }) => {
     const [task, setTask] = useState(currentTask);
+    // document.getElementById("container mt-3").style.display = "none";
+
 
     useEffect(() => {
         setTask(currentTask);
