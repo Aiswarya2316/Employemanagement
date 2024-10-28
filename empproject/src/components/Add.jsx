@@ -34,7 +34,7 @@ const Add = () => {
         
         setLoading(true);
 
-        axios.post('https://aiswarya2325.pythonanywhere.com/employemanagement/employees/', {
+        axios.post('https://alan2325.pythonanywhere.com/employe/employees/', {
             name,
             address,
             position,
